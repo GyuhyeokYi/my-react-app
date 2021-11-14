@@ -58,4 +58,17 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
+function App() {
+  return (
+    <div>
+      <Clock/>
+      <Clock/>
+      <Clock/>
+    </div>
+  );
+}
 
+ReactDOM.render(
+  <App/>
+  , document.getElementById('root')
+);
