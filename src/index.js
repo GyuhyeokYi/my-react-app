@@ -19,6 +19,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Hello from './components/Hello';
+import Welcome from './components/Welcome';
+import Clock from './components/Clock';
 
 // const hello = Hello();
 
@@ -28,5 +30,32 @@ ReactDOM.render((
   </React.StrictMode>
 ), document.getElementById('root'));
 
+function tick() {
+  const hello = Hello();
+  ReactDOM.render(hello, document.getElementById('root'));
+}
+
+// setInterval(tick, 1000);
+
+const element = <Welcome name="Sara" />
+
+ReactDOM.render(element, document.getElementById('page'));
+
+function NameList() {
+  return (
+    <div>
+      <Welcome name="Sara"/>
+      <Welcome name="Cahal"/>
+      <Welcome name="Edite"/>
+    </div>
+  )
+}
+
+ReactDOM.render(<NameList/>, document.getElementById('page'));
+
+ReactDOM.render(
+  <Clock/>,
+  document.getElementById('root')
+)
 
 
