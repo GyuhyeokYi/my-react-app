@@ -21,6 +21,7 @@ import ReactDOM from 'react-dom';
 import Hello from './components/Hello';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
+import Toggle from './components/Toggle';
 
 // const hello = Hello();
 
@@ -64,6 +65,7 @@ function App() {
       <Clock/>
       <Clock/>
       <Clock/>
+      <Toggle/>
     </div>
   );
 }
