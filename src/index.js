@@ -22,6 +22,8 @@ import Hello from './components/Hello';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 import Toggle from './components/Toggle';
+import Greeting from './components/Greeting';
+import LoginControl from './components/LoginControl';
 
 // const hello = Hello();
 
@@ -73,4 +75,14 @@ function App() {
 ReactDOM.render(
   <App/>
   , document.getElementById('root')
+);
+
+ReactDOM.render(
+  <Greeting isLoggedIn={false}/>
+  , document.getElementById('root')
+);
+
+ReactDOM.render(
+  <LoginControl />,
+  document.getElementById('root')
 );
