@@ -24,6 +24,7 @@ import Clock from './components/Clock';
 import Toggle from './components/Toggle';
 import Greeting from './components/Greeting';
 import LoginControl from './components/LoginControl';
+import Page from './components/Page';
 
 // const hello = Hello();
 
@@ -85,4 +86,42 @@ ReactDOM.render(
 ReactDOM.render(
   <LoginControl />,
   document.getElementById('root')
+);
+
+ReactDOM.render(
+  <Page />,
+  document.getElementById('root')
+);
+
+// const numbers = Array.from(new Array(5), (x, i) => i + 1);//[...new Array(5).keys()]; //[1, 2, 3, 4, 5];
+// const listItems = numbers.map((number) => 
+//   <li>{number}</li>
+// );
+
+// ReactDOM.render(
+//   <ul>{listItems}</ul>,
+//   document.getElementById('list')
+// );
+function ListItem(props) {
+  const value = props.value;
+  return (
+    <li>{value}</li>
+  )
+}
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) => 
+    <ListItem key={number.toString()} value={number}/>
+  );
+
+  return (
+    <ul>{listItems}</ul>
+  )
+}
+
+const numbers2 = Array.from(new Array(5), (x, i) => i + 1);
+
+ReactDOM.render(
+  <NumberList numbers={numbers2} />,
+  document.getElementById('list')
 );
