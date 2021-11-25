@@ -25,6 +25,8 @@ import Toggle from './components/Toggle';
 import Greeting from './components/Greeting';
 import LoginControl from './components/LoginControl';
 import Page from './components/Page';
+import NameForm from './components/NameForm';
+import FlavorForm from './components/FlavorForm';
 
 // const hello = Hello();
 
@@ -123,5 +125,53 @@ const numbers2 = Array.from(new Array(5), (x, i) => i + 1);
 
 ReactDOM.render(
   <NumberList numbers={numbers2} />,
+  document.getElementById('list')
+);
+
+function Blog(props) {
+  const sidebar = (
+    <ul>
+      {props.posts.map((post) =>
+        <li key={post.id}>
+          {post.title}
+        </li>
+      )}
+    </ul>
+  );
+
+  const content = props.posts.map((post) =>
+        <div key={post.id}>
+          <h3>{post.title}</h3>
+          <p>{post.content}</p>
+        </div>
+  );
+
+  return (
+    <div>
+      {sidebar}
+      <hr />
+      {content}
+    </div>
+  )
+}
+
+
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
+
+ReactDOM.render(
+  <Blog posts={posts} />,
+  document.getElementById('list')
+);
+
+ReactDOM.render(
+  <NameForm />,
+  document.getElementById('list')
+);
+
+ReactDOM.render(
+  <FlavorForm />,
   document.getElementById('list')
 );
