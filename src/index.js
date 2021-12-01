@@ -27,6 +27,7 @@ import LoginControl from './components/LoginControl';
 import Page from './components/Page';
 import NameForm from './components/NameForm';
 import FlavorForm from './components/FlavorForm';
+import Reservation from './components/Reservation';
 
 // const hello = Hello();
 
@@ -175,3 +176,16 @@ ReactDOM.render(
   <FlavorForm />,
   document.getElementById('list')
 );
+
+ReactDOM.render(
+  <Reservation />,
+  document.getElementById('root')
+);
+
+ReactDOM.render(
+  <input value="hi"/>,
+  document.getElementById('root')
+);
+
+setTimeout(() => 
+ReactDOM.render(<input value={null} />, document.getElementById('root')), 2000)
