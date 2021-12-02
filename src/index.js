@@ -28,6 +28,8 @@ import Page from './components/Page';
 import NameForm from './components/NameForm';
 import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation';
+import Calculator from './components/Calculator';
+import Calculator2 from './components/Calculator2';
 
 // const hello = Hello();
 
@@ -189,3 +191,13 @@ ReactDOM.render(
 
 setTimeout(() => 
 ReactDOM.render(<input value={null} />, document.getElementById('root')), 2000)
+
+ReactDOM.render(
+  <Calculator />,
+  document.getElementById('calc')
+)
+
+ReactDOM.render(
+  <Calculator2 />,
+  document.getElementById('calc')
+)
