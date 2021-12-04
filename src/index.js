@@ -30,6 +30,7 @@ import FlavorForm from './components/FlavorForm';
 import Reservation from './components/Reservation';
 import Calculator from './components/Calculator';
 import Calculator2 from './components/Calculator2';
+import SignUpDialog from './components/SignUpDialog';
 
 // const hello = Hello();
 
@@ -200,4 +201,9 @@ ReactDOM.render(
 ReactDOM.render(
   <Calculator2 />,
   document.getElementById('calc')
+)
+
+ReactDOM.render(
+  <SignUpDialog />,
+  document.getElementById('dialog')
 )
