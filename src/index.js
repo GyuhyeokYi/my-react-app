@@ -31,6 +31,7 @@ import Reservation from './components/Reservation';
 import Calculator from './components/Calculator';
 import Calculator2 from './components/Calculator2';
 import SignUpDialog from './components/SignUpDialog';
+import FilterableProductTable from './components/ui-test/FilterableProductTable';
 
 // const hello = Hello();
 
@@ -206,4 +207,9 @@ ReactDOM.render(
 ReactDOM.render(
   <SignUpDialog />,
   document.getElementById('dialog')
+)
+
+ReactDOM.render(
+  <FilterableProductTable />,
+  document.getElementById('table')
 )
