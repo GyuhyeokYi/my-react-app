@@ -32,6 +32,7 @@ import Calculator from './components/Calculator';
 import Calculator2 from './components/Calculator2';
 import SignUpDialog from './components/SignUpDialog';
 import FilterableProductTable from './components/ui-test/FilterableProductTable';
+import MyComponent from './components/bundle-test/MyComponent';
 
 // const hello = Hello();
 
@@ -212,4 +213,9 @@ ReactDOM.render(
 ReactDOM.render(
   <FilterableProductTable />,
   document.getElementById('table')
+)
+
+ReactDOM.render(
+  <MyComponent />,
+  document.getElementById('bundle')
 )
