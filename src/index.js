@@ -33,6 +33,7 @@ import Calculator2 from './components/Calculator2';
 import SignUpDialog from './components/SignUpDialog';
 import FilterableProductTable from './components/ui-test/FilterableProductTable';
 import MyComponent from './components/bundle-test/MyComponent';
+import ContextTest from './components/context-test/ContextTest';
 
 // const hello = Hello();
 
@@ -215,7 +216,12 @@ ReactDOM.render(
   document.getElementById('table')
 )
 
+// ReactDOM.render(
+//   <MyComponent />,
+//   document.getElementById('bundle')
+// )
+
 ReactDOM.render(
-  <MyComponent />,
+  <ContextTest />,
   document.getElementById('bundle')
 )
